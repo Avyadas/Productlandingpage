@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooms</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+        html{
+            max-width: fit-content;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        body {
+            /* font-family: Arial, sans-serif; */
+            /* margin: 0;
+            padding: 0; */
+            background-color:rgb(247, 242, 244); 
+            /* background-size: cover; */
+            /* max-width: 100%; */
+            display: inline-block;
+
+        }
+
+        .body h1 {
+            background: transparent;
+    }
+
+        .container {
+            max-width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            padding: 0 15px;
+            background-color:rgb(247, 242, 244); 
+            
+        }
+
+        nav {
+            overflow: hidden;
+            background-color:rgb(247, 242, 244);
+            margin-top:-5px;
+            color:rgb(245, 225, 239);
+           max-width: 100%;
+           flex-wrap: wrap;
+          
+        }
+        nav a{
+            float:left;
+            color:rgb(175, 6, 99);
+           text-align: center;
+           padding: 30px 107px;
+           font-size: 14px;
+           text-decoration: none;
+           font-weight: bold;
+           text-transform: capitalize;
+           flex-wrap: wrap;
+        }
+        nav a:hover{
+            background:rgb(175, 6, 99);
+            color:#fff;
+
+        }
+        .container{
+            align-content: center;
+            height: 100vh;
+            padding: 0 100px 0 100px;
+        }
+        .container card{
+            padding: 0 15px 0 15px; }
+            .container h1{
+                margin: 100px 0 0 0;
+            }
+        
+       
+      .card{
+        margin: 170px 30px;
+        position: relative;
+        width:200px;
+        height:200px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+        transition: 0.3s;
+        padding: 30px 50px;
+        background-color: #fff;
+        cursor: pointer;
+      }
+      .card:hover{
+        height: 450px;
+
+      }
+.image{
+    position:relative;
+    width: 200px;
+    height: 200px;
+    transform: translateY(-10px);
+    z-index:99;
+    /* align-content: center; */
+    
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.row{
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.3s;
+}
+.row h1{
+    margin: 100px 0 0 0 ;
+}
+.card:hover > .row{
+        opacity: 1;
+        transform: translateY(-80px);
+
+      }
+.row button{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    border-style: hidden;
+    background:rgb(175, 6, 99);
+    color:#fff;
+
+}  
+.row button:hover{
+    background:#fff;
+            color:rgb(175, 6, 99);
+
+}
+
+    .Intro {
+        
+            background-color: rgb(245, 227, 235);
+            color:rgb(245, 224, 234);
+            /* padding: 80px 0 80px 80px; */
+            height: 100vh;
+            max-width:100%;
+            background-image: url(back.jpg);
+            background-size:cover ;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    .Intro h1{
+        font-size: -webkit-xxx-large;
+    }
+        
+        .about { 
+	display: flex; 
+	align-items: center; 
+	background-color:rgb(247, 242, 244); 
+	justify-content: space-between; 
+	width: 100vw; 
+    height: 100vh;
+    flex-direction: column;
+} 
+
+.about .about-text { 
+	width: 50vw; 
+	color: rgb(175, 6, 99); 
+    font-size: 20px;
+	padding: 5rem 5rem 5rem 5rem;
+
+        }
+    .contactform {
+    padding: 0 34px;
+    padding-top: 100px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    
+}
+.contactform  h1{
+    font-family: "Source Code Pro", monospace;
+    font-weight:400;
+    text-align: center;
+
+}
+.contactform form div{
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.contactform form div{
+    width:16vw;
+    border-radius: 5px;
+    margin: 6px;
+    padding: 3px;
+}
+.contact-form .form-controls {
+    width: 80%;
+    padding: 10px px 0;
+    margin: 1.67rem 0;
+}
+.contact-form .form-btn {
+    width: 77%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: none;
+}
+#emailHelp {
+    font-size: 8px;
+    color:midnightblue; 
+    display: flex;
+    
+}
+#form-check{
+    flex-direction: row;
+}
+#form-check-input{
+    width: 20px;
+
+
+}
+.footer { 
+	background-color:rgb(247, 242, 244);
+	color: black; 
+	padding: 2rem; 
+    text-align: center;
+} 
+
+.footer-list-items { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	height: 50px; 
+	width: 50px; 
+	margin: 1rem 1rem 0 1rem; 
+	border-radius: 50%; 
+	background-color: white; 
+} 
+
+.footer-links { 
+	font-size: 24px; 
+	color:rgb(175, 6, 99); 
+	text-decoration: none; 
+} 
+
+.social-links { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+    
+} 
+
+.footer-menu { 
+	padding: 0 5rem; 
+} 
+
+.footer-menu .footer-menu-list { 
+	display: flex; 
+	list-style: none; 
+} 
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+    
+            <a style= "font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" href ="#home">Blooms</a>
+            <a  class = "links" href="#home">Home</a>
+            <a  class = "links" href="#shop">Shop</a>
+            <a class="links" href="#about">About</a>
+            <a  class ="links" href="#contact">Contact</a>
+            
+        </nav>
+        <div class="Intro"id="home">
+            <h2 style="font-size: larger;padding: 235px 50px 15px; color:rgb(175, 6, 99);">Flowers Can Say It Better!</h2>
+            <h1  style="color: darkolivegreen;padding: 0px 50px 15px">Nature's poetry in a single bloom</h1>
+            <h3 style = "font-size: larger;padding: 0 50px; color:rgb(175, 6, 99)">The enthusiasm for flowers never stops; Flowers delivered at your doorsteps."</h3>
+        </div>
+        <section id="about" class="about"> 
+        
+            <div class="about-text"> 
+                <h1 class="my-heading" style="color: darkolivegreen">About </h1> 
+                <p class="lead-para"> 
+                    At Blooms, we believe that every bloom tells a story and every bouquet sets a mood.
+    Founded with the vision of connecting people to the beauty of nature, Floom serves as a bridge between local artisan florists and discerning customers who seek unique, fresh, and captivating floral arrangements.
+    Our commitment is to curate an exceptional range of handcrafted bouquets, crafted with passion and designed to inspire. By partnering with the best local talent, we ensure that every bouquet tells its own story, embodying the essence of its creator and the place from which it originates.
+    With Floom, you're not just sending flowers; you're sharing a piece of the artisan's heart, the fragrance of a locale, and the spirit of a memory waiting to be created.A flower bouquet is a collection of flowers in a creative arrangement. Flower bouquets can be arranged for the decor of homes or public buildings, or may be handheld. Handheld bouquets are classified by several different popular shapes and styles, including nosegay, crescent, and cascading bouquets. Flower bouquets are often given for special occasions such as birthdays, anniversaries or funerals. They are also used extensively in weddings as well as Olympics Medal Ceremonies. Bouquets arranged in vases or planters for home decor can be arranged in either traditional or modern styles. Symbolism may be attached to the types of flowers used, according to the culture.
+                </p>
+            </div>
+        </section>
+        <div style ="background-color:rgb(175, 6, 99)" class="container" id="shop">
+            <div class="card" >
+                <div class="image">
+                    <img src="blue.png" alt="Product Image"></div>
+                    <div class="row">
+                    <h2 style="margin: 60px 0 0 0;">Blue Orchids </h2>
+                    <p>Orchids have the tiniest seeds in the world. This makes them a challenge to grow and cultivate. They
+                        take forever to sprout and actually turn into a plant! Growing orchids from seeds is only for the
+                        patient and very green-thumbed.</p>
+                    <button onclick="window.location.href='https://www.fnp.com/gift/mesmerising-blue-orchids-bouquet?utm_source=Google&utm_medium=cpc&utm_campaign=20858161392&utm_adgroup=&utm_keyword=&utm_device=c&utm_placement=&utm_network=x&gad_source=1&gclid=CjwKCAiA_OetBhAtEiwAPTeQZxifSq-ZTpvKLC5qF2_IPhqsJOfkgABI-DOueZIcwMJToYCZLENCLxoCn-4QAvD_BwE';">View Details</button>
+                </div>
+            </div>
+               <div class="card">
+                    <div class="image">
+                    <img src="pink.png" alt="Product Image 2"></div>
+                    <div class="row">
+                    <h2 style="margin: 60px 0 0 0;">Pink Carnations</h2>
+                    <p>Handpicked baby pink carnations to let the special someone know how much you miss them. Show your
+                        emotions with carnations, beautifully arranged in bouquet style and sprinkled with White Gypsy
+                        Fillers.</p>
+                    <button
+                        onclick="window.location.href ='https://www.fnp.com/gift/pretty-pink-carnations-bouquet?utm_source=Google&utm_medium=cpc&utm_campaign=20858161392&utm_adgroup=&utm_keyword=&utm_device=c&utm_placement=&utm_network=x&gad_source=1&gclid=CjwKCAiA_OetBhAtEiwAPTeQZ6i0i-x5dZiLPDGyPvywl6B0lX1xu74XteofhcSrFInL5bjk9fqbBxoCNxoQAvD_BwE';">View Details</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                    <img src="lp.png" alt="Product Image 3"></div>
+                    <div class="row">
+                    <h2 style="margin: 60px 0 0 0;">Timeless Roses</h2>
+                    <p>It is elegantly wrapped in premium-quality paper and embellished with a touch of satin. The jute
+                        wrap-around adds elegance while being mindful of the environment. This is just what you need when
+                        you want to say it all. </p>
+                    <button
+                        onclick="window.location.href ='https://www.fnp.com/gift/happy-n-loved-roses-bouquet?utm_source=Google&utm_medium=cpc&utm_campaign=20858161392&utm_adgroup=&utm_keyword=&utm_device=c&utm_placement=&utm_network=x&gad_source=1&gclid=CjwKCAiA0PuuBhBsEiwAS7fsNTiL0XQpqbab_tk5_VMNNMPnddGZzDch9L3FdUSS8NWMYp_4jMT7whoCCGsQAvD_BwE';">View Details</button>
+                    </div>
+                </div>
+        </div>
+        <section class="contact" id="contact" style="padding:130px 40px 10px 40px;height: 100vh;"> 
+            <link rel="styleshett" href ="contact.html">
+            <div class="contact-heading"> 
+                <h1 class="my-heading text-center">Contact Me</h1> 
+            </div> 
+            <div class="contact-content"> 
+                <div class="contact-form-container">
+                    <form class="contact-form" style="display: flex;
+                    flex-direction: column;"> 
+                        <input class="form-controls" type="text"
+                            placeholder="Your Name" style="margin: 10px 0"> 
+                        <input class="form-controls" type="text"
+                            placeholder="Your Email" style="margin: 10px 0"> 
+                        <input class="form-controls" type="text"
+                            placeholder="Your Phone" style="margin: 10px 0"> 
+                        <textarea class="form-controls"
+                                placeholder="Write your message"
+                                name="message" id style = "margin: 10px 0;height: 100px;" cols="30"
+                                rows="10"> 
+                        </textarea> 
+                        <input class="form-btn btn common-btn"
+                            type="submit" value="Send Message" style="margin: 5px 0"> 
+                    </form> 
+                </div> 
+                </section>
+    </div>
+</body>
+</html>
